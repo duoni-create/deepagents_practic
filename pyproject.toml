@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepagents-practic"
+version = "0.1.0"
+description = "Deep Agents course practice project"
+requires-python = ">=3.10"
+dependencies = [
+  "deepagents>=0.5.3",
+  "langchain-openai>=1.0.0",
+  "python-dotenv>=1.0.1",
+  "pydantic>=2.7.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
