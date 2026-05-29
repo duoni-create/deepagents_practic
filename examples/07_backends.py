@@ -4,7 +4,7 @@ import tempfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.tools import get_backend_plan, pretty_json
+from deepagents_practic.tools05 import get_backend_plan, pretty_json
 
 
 # 中文说明：内存后端示例，把文件内容保存在字典里，进程结束后不会持久化。

@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from .config import Settings, load_settings
-from .mock_agent import MockDeepAgent
-from .tools import (
+from .config02 import Settings, load_settings
+from .mock_agent04 import MockDeepAgent
+from .tools05 import (
     design_lab,
     estimate_lesson_minutes,
     explain_core_capability,

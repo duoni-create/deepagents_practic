@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.tools import get_memory_plan, pretty_json
+from deepagents_practic.tools05 import get_memory_plan, pretty_json
 
 
 # 中文说明：课堂版记忆存储，只保存允许长期记住的信息。

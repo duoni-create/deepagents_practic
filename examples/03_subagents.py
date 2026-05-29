@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.agent_factory import build_course_agent
-from deepagents_practic.config import load_settings
+from deepagents_practic.agent_factory03 import build_course_agent
+from deepagents_practic.config02 import load_settings
 
 
 # 中文说明：子代理示例入口，检查 Agent 是否包含资料、实验和审核三个子代理。

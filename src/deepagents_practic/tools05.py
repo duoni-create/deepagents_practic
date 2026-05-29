@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Literal
 
-from .core_capabilities import (
+from .core_capabilities06 import (
     explain_core_capability,
     get_async_subagent_plan,
     get_backend_plan,

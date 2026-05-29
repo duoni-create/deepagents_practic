@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.tools import (
+from deepagents_practic.tools05 import (
     explain_core_capability,
     get_async_subagent_plan,
     get_backend_plan,

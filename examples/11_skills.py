@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.tools import get_skill_plan, pretty_json
+from deepagents_practic.tools05 import get_skill_plan, pretty_json
 
 
 # 中文说明：课程研发技能对象，把目标模板、工作流和验收标准封装起来。

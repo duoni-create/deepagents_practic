@@ -4,7 +4,7 @@ import asyncio
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.tools import get_async_subagent_plan, pretty_json
+from deepagents_practic.tools05 import get_async_subagent_plan, pretty_json
 
 
 # 中文说明：模拟单个异步子代理处理任务，并返回可合并的结构化结果。

@@ -30,7 +30,7 @@ CORE_CAPABILITIES: tuple[CoreCapability, ...] = (
         zh_name="模型",
         classroom_meaning="模型是推理引擎，课堂重点不是只会聊天，而是稳定支持 tool calling、结构化输出和低温可重复执行。",
         code_focus="Settings 读取 DeepSeek OpenAI-compatible 配置，_build_real_agent() 创建 ChatOpenAI。",
-        example_file="src/deepagents_practic/config.py",
+        example_file="src/deepagents_practic/config02.py",
         doc_url="https://docs.langchain.com/oss/python/deepagents/quickstart",
     ),
     CoreCapability(
@@ -53,7 +53,7 @@ CORE_CAPABILITIES: tuple[CoreCapability, ...] = (
         name="Subagents",
         zh_name="子代理",
         classroom_meaning="把资料研究、实验设计、质量审核等专业任务放进隔离上下文，由主 Agent 负责委派和整合。",
-        code_focus="agent_factory.py 中配置 research-agent、lab-agent、review-agent。",
+        code_focus="agent_factory03.py 中配置 research-agent、lab-agent、review-agent。",
         example_file="examples/03_subagents.py",
         doc_url="https://docs.langchain.com/oss/python/deepagents/subagents",
     ),

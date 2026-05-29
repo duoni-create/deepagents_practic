@@ -56,7 +56,7 @@ def generate_ecommerce_report_spec() -> dict[str, object]:
     """输出报表 Agent 的代码开发规格，便于课堂拆任务。"""
     return {
         "modules": [
-            {"file": "src/ecommerce/tools.py", "work": "实现指标读取、需求定义、架构设计、上线计划和质量检查工具"},
+            {"file": "src/ecommerce/tools05.py", "work": "实现指标读取、需求定义、架构设计、上线计划和质量检查工具"},
             {"file": "src/ecommerce/agent.py", "work": "实现报表 Agent 的离线运行、工具注册和事件流"},
             {"file": "src/ecommerce/project.py", "work": "串联需求、架构、开发、上线四个阶段"},
             {"file": "src/ecommerce/report_agent_project.py", "work": "提供独立项目运行入口"},

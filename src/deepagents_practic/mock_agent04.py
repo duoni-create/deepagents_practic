@@ -24,7 +24,8 @@ class MockDeepAgent:
         self.subagents = subagents or []
 
     # 中文说明：模拟一次 Agent 调用，把用户任务、工具和子代理信息拼成最终回答。
-    def invoke(self, payload: dict[str, Any]) -> dict[str, list[MockMessage]]:
+    def invoke(self, payload: dict[str, Any], config: dict[str, Any] | None = None, **kwargs: Any) -> dict[str, list[MockMessage]]:
+        """模拟真实 Runnable.invoke 接口，兼容 config 等运行参数。"""
         user_message = payload["messages"][-1]["content"]
         tool_names = "、".join(self.tools.keys()) or "无"
         subagent_names = "、".join(item["name"] for item in self.subagents) or "默认 general-purpose"

@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
 from deepagents_practic import build_course_agent, load_settings, run_agent
-from deepagents_practic.tools import quality_check, pretty_json
+from deepagents_practic.tools05 import quality_check, pretty_json
 
 
 PROJECT_TASK = """请完成一个中型综合项目设计：

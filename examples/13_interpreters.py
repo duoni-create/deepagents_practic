@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.tools import get_interpreter_plan, pretty_json
+from deepagents_practic.tools05 import get_interpreter_plan, pretty_json
 
 
 # 中文说明：模拟解释器对章节列表做确定性聚合，计算总时长、实验覆盖率和修订标记。

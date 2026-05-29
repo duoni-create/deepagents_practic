@@ -1,6 +1,6 @@
 from deepagents_practic import build_course_agent, load_settings, run_agent
-from deepagents_practic.core_capabilities import CORE_CAPABILITIES
-from deepagents_practic.tools import explain_core_capability, estimate_lesson_minutes, get_permission_policy
+from deepagents_practic.core_capabilities06 import CORE_CAPABILITIES
+from deepagents_practic.tools05 import explain_core_capability, estimate_lesson_minutes, get_permission_policy
 from ecommerce.tools import check_ecommerce_report_project, define_ecommerce_report_requirements, load_ecommerce_metrics
 
 

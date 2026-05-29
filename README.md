@@ -16,7 +16,7 @@ python examples/11_skills.py
 python examples/12_sandboxes.py
 python examples/13_interpreters.py
 python examples/14_profiles.py
-python src/deepagents_practic/course_builder_project.py
+python src/deepagents_practic/course_builder_project01.py
 PYTHONPATH=src python -m ecommerce.report_agent_project
 ```
 

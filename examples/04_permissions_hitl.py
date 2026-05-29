@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.tools import get_permission_policy, pretty_json
+from deepagents_practic.tools05 import get_permission_policy, pretty_json
 
 
 # 中文说明：根据路径、动作和策略模拟判断当前操作是允许还是拒绝。

@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.tools import design_lab, estimate_lesson_minutes, pretty_json
+from deepagents_practic.tools05 import design_lab, estimate_lesson_minutes, pretty_json
 
 
 # 中文说明：工具调用示例入口，直接调用课程时长估算和实验设计工具并打印结果。

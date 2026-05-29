@@ -4,7 +4,7 @@ from fnmatch import fnmatch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from deepagents_practic.tools import get_permission_policy, pretty_json
+from deepagents_practic.tools05 import get_permission_policy, pretty_json
 
 
 # 中文说明：按通配符规则判断指定路径的读写操作是否被权限策略允许。
