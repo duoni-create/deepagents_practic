@@ -30,6 +30,7 @@ Human-in-the-loop、Permissions、Memory、Skills、Sandboxes、Interpreters、P
 遇到大任务时先规划，再调用工具或委派子代理，最后给出可执行交付物。"""
 
 
+# 核心能力相关工具
 CORE_CAPABILITY_TOOLS = [
     list_core_capabilities,
     explain_core_capability,
@@ -44,6 +45,7 @@ CORE_CAPABILITY_TOOLS = [
 ]
 
 
+# 课程业务工具
 BUSINESS_TOOLS = [
     load_course_catalog,
     estimate_lesson_minutes,
@@ -93,7 +95,7 @@ def _build_real_agent(settings: Settings):
     ]
     return create_deep_agent(
         model=model,
-        tools=[*BUSINESS_TOOLS, *CORE_CAPABILITY_TOOLS],
+        tools=[*BUSINESS_TOOLS, *CORE_CAPABILITY_TOOLS],   # ☀️☀️☀️ 这里要把 BUSINESS_TOOLS 业务工具也得加上，就算是属于 “子agent” 的工具， 也要先加上，后面再分配给 “子agent”，这里的 tools 就是所有的工具。
         system_prompt=COURSE_SYSTEM_PROMPT,
         subagents=subagents,
         name="course-builder",
@@ -119,11 +121,11 @@ def build_course_agent(settings: Settings | None = None):
     )
 
 
-# 中文说明：统一执行 Agent 任务，并从返回消息中取出最后的文本结果。
+# 中文说明：统一执行 Agent 任务，并从返回消息中取出最后的文本结果。     ☀️☀️☀️ Any 的意思是：这个参数可以是任何类型。
 def run_agent(agent: Any, task: str) -> str:
     """统一封装 invoke 调用，兼容真实 Agent 和离线模拟 Agent。"""
     result = agent.invoke(
         {"messages": [{"role": "user", "content": task}]},
-        config={"recursion_limit": 40},
+        config={"recursion_limit": 40},    # ☀️☀️☀️  recursion_limit=40 主要限制 “主 Agent” 这次 LangGraph 运行最多走多少图步数。 
     )
     return result["messages"][-1].content

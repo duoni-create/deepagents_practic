@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 from typing import Literal
 
+# ☀️☀️☀️☀️☀️☀️ 下面这些导入的工具，在这里 tools05.py 没用上，主要是想在这里做一个统一的工具汇总。  agent_factory03.py 那边就直接从 tools05.py 导入所有的工具， 然后开始组装 Agent 可用工具。
+# 简单说就是：下面 import 的工具不是给 tools05.py 自己用的，而是让 tools05.py 变成“所有工具函数的统一出口”，方便 agent_factory03.py 从一个地方导入全部工具。
 from .core_capabilities06 import (
     explain_core_capability,
     get_async_subagent_plan,

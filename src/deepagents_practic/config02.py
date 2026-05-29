@@ -8,7 +8,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
-# 中文说明：读取项目根目录下的 .env 文件，并把其中的键值写入环境变量。
+# 中文说明：读取项目根目录下的 .env 文件，并把其中的键值写入环境变量。  ☀️☀️☀️ 写入环境变量其实就是：写入到 os.environ ，后面直接通过 os.  来调用就可以了
 def load_env_file(path: Path | None = None) -> None:
     """读取 .env 文件，避免课堂环境必须额外安装 python-dotenv。"""
     env_path = path or PROJECT_ROOT / ".env"
@@ -19,7 +19,7 @@ def load_env_file(path: Path | None = None) -> None:
         if not line or line.startswith("#") or "=" not in line:
             continue
         key, value = line.split("=", 1)
-        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))    # ☀️☀️☀️  从这里可以看出环境环境变量，其实也是一个字典而已，所以下面可以通过 get(key) 获取到 value。
 
 
 # 中文说明：集中保存项目运行所需的模型、接口、开关和课程主题配置。
@@ -30,7 +30,7 @@ class Settings:
     deepseek_api_key: str
     deepseek_base_url: str
     deepseek_model: str
-    use_real_deepagents: bool
+    use_real_deepagents: bool        # ☀️☀️☀️  bool 是布尔类型
     course_topic: str
 
 
@@ -38,9 +38,9 @@ class Settings:
 def load_settings() -> Settings:
     load_env_file()
     return Settings(
-        deepseek_api_key=os.getenv("DEEPSEEK_API_KEY", ""),
+        deepseek_api_key=os.getenv("DEEPSEEK_API_KEY", ""),      # ☀️☀️☀️ get(key, 默认值)
         deepseek_base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com"),
         deepseek_model=os.getenv("DEEPSEEK_MODEL", "deepseek-v4-flash"),
-        use_real_deepagents=os.getenv("USE_REAL_DEEPAGENTS", "false").lower() == "true",
+        use_real_deepagents=os.getenv("USE_REAL_DEEPAGENTS", "false").lower() == "true",    # ☀️☀️☀️ 这里最后为什么要加上 == "true"，是因为 get(key) 得到的 value 是一个字符串，通过 == "true" 来转成 bool 类型
         course_topic=os.getenv("COURSE_TOPIC", "Deep Agents 企业级智能体开发"),
     )
