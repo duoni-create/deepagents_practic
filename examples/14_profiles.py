@@ -28,7 +28,7 @@ def build_model_config(provider: str, task: str) -> dict[str, object]:
 # 中文说明：Profiles 示例入口，分别生成 deepseek/openai/claude 的配置并打印。
 def main() -> None:
     """知识点：Profiles 把不同模型供应商的差异收敛到配置档案。"""
-    configs = [build_model_config(provider, "生成 Deep Agents 课程大纲") for provider in PROFILES]
+    configs = [build_model_config(provider, "生成 Deep Agents 课程大纲") for provider in PROFILES]   # ☀️☀️☀️ for provider in PROFILES 遍历的是字典的 key，不是 value。
     assert {item["provider"] for item in configs} == {"deepseek", "openai", "claude"}
     assert configs[0]["tool_visibility"] == "explicit"
     print(pretty_json({"plan": get_profile_plan(), "model_configs": configs}))
